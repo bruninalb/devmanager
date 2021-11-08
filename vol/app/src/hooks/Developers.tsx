@@ -79,6 +79,10 @@ function DeveloperProvider({children}: DeveloperProviderProps) {
 
     }, [search]);
 
+    // RENDERIZA OS DEVS AO ENTRAR PELA PRIMEIRA VEZ NA PAGE
+    useEffect(() => {
+        show()
+    }, []);
     function del() {
         const {id} = developer
 

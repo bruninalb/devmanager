@@ -37,7 +37,7 @@ export default function EditDeveloper(){
         setEditResponse(true)
     }
 
-    if (developer.id)
+    if (developer && developer.id)
         return (
 
         <Modal icon={<MdEdit/>} title={`EDITAR DEVELOPER`}

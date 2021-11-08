@@ -16,13 +16,9 @@ function App() {
     const {setSearch, search} = useSearch();
     const {setRegisterDeveloperModal} = useModals();
 
-    // RENDER DEVELOPERS LIST
-    useEffect(() => {
-        show()
-    }, []);
 
 
-    // DETECTA O MOVIMENTO DO USUÁRIO E CHAMA A FUNÇÃO DE RENDERIZAÇÃO
+    // DETECTA O MOVIMENTO DE ROLAGEM DO CONTAINER DOS DEVS, E RENDERIZA DE ACORDO COM A PAGINAÇÃO
     function handleScroll(target: EventTarget & HTMLDivElement) {
         scroll(target)
     }
@@ -38,7 +34,7 @@ function App() {
 
             <nav className={`globalContainer ${styles.NavContainer}`}>
 
-                <Input type={"text"} value={search.name} placeholder={"Digite aqui sua busca"}
+                <Input type={"text"} placeholder={"Digite aqui sua busca"}
                        onChange={(e: ChangeEvent<HTMLInputElement>) => {
                            setSearch({...search, name: e.currentTarget.value, hobby: e.currentTarget.value})
                        }}/>

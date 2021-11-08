@@ -15,13 +15,13 @@ ReactDOM.render(
         <LoadingProvider>
             <AlertProvider>
                 <SearchProvider>
-                    <ModalsProvider>
-                        <DeveloperProvider>
+                    <DeveloperProvider>
+                        <ModalsProvider>
                             <Loading/>
                             <Alert/>
                             <App/>
-                        </DeveloperProvider>
-                    </ModalsProvider>
+                        </ModalsProvider>
+                    </DeveloperProvider>
                 </SearchProvider>
             </AlertProvider>
         </LoadingProvider>

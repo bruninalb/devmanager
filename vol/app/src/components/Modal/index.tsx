@@ -2,7 +2,7 @@ import styles from "./styles.module.scss"
 import React from "react";
 import {IoMdCloseCircle} from "react-icons/io"
 type ModalProps = React.HTMLProps<HTMLDivElement> & {
-    icon: React.HTMLProps<HTMLOrSVGImageElement>
+    icon?: React.HTMLProps<HTMLOrSVGImageElement>
     title: string
     subtitle?: string
     active?: boolean

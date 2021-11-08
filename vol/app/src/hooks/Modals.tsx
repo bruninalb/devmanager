@@ -4,7 +4,6 @@ type ModalsContextData = {
     setRegisterDeveloperModal: (active:boolean) => void
     editDeveloperModal: boolean
     setEditDeveloperModal: (active:boolean) => void
-
 }
 
 const ModalsContext = createContext({} as ModalsContextData)

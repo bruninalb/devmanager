@@ -13,6 +13,7 @@ export default function Filters() {
 
 
     useEffect(() => {
+        if(search)
         switch (search.gender) {
             case"M":
                 setActiveM(styles.Active)
@@ -27,7 +28,7 @@ export default function Filters() {
                 setActiveF("")
                 break;
         }
-    }, [search.gender]);
+    }, [search]);
 
     function handleResetFilters(){
         let newSearch = {...search}
@@ -68,7 +69,7 @@ export default function Filters() {
                     <h3>Gênero</h3>
                     <div>
                         <span className={activeM} onClick={(e: React.MouseEvent<HTMLSpanElement>) => {
-                            if (search.gender === "M") {
+                            if (search && search.gender === "M") {
                                 const newSearch = {...search}
                                 delete newSearch["gender"]
                                 setSearch(newSearch);

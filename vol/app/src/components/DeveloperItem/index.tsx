@@ -46,12 +46,12 @@ export default function DeveloperItem({developer}: DeveloperItemProps) {
         }
     }, [response]);
 
-    // SHOW HIDDEN CONTENT IN DEVELOPER
+    // MOSTRAR CONTEUDO OCULTO DE CADA DEV
     async function handleShowHidden() {
         setActive(oldValue => !oldValue)
     }
 
-    // HANDLE CONFIRM DELETE AND CALL API FUNCTION USING STATE
+    // CONFIRMA A EXCLUSÃO
     async function handleDelete() {
         showAlert(`EXCLUIR DEVELOPER`, `Você confirma a exclusão do DEV de ID - ${developer.id} ?`, "confirm")
         setDeleteResponse(true)

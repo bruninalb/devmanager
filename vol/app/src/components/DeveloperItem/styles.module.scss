@@ -1,0 +1,97 @@
+@import '../../global';
+
+.DeveloperContainer {
+  background-color: white;
+  width: 100%;
+  padding: $size10;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: $size5;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  > .HeaderContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+
+      > h2 {
+        margin: 0;
+
+        > span {
+          font-weight: 500;
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    > .ShowHiddenContainer {
+
+      svg {
+        color: $primary100;
+        font-size: $size20;
+        transition: all .5s;
+      }
+    }
+
+    > .Active {
+
+      > svg {
+        transform: rotate(180deg);
+      }
+    }
+
+  }
+
+  > .HiddenContainer {
+    display: none;
+    flex-flow: column;
+    margin-top: $size10;
+
+    > h3 {
+      margin-bottom: $size5;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    > .ButtonsContainer {
+      margin-top: $size10;
+      z-index: 10;
+
+      > button {
+        border: none;
+        padding: $size10;
+        transition: all .5s;
+
+        &:first-child {
+          margin-right: $size10;
+          background-color: $primary100;
+          color: $white100;
+        }
+
+        &:last-child {
+          background-color: $red100;
+          color: $white100;
+        }
+        &:hover {
+          opacity: .7;
+          cursor: pointer;
+        }
+      }
+
+    }
+
+  }
+
+  > .Active {
+    display: flex;
+  }
+}

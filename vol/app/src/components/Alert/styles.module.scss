@@ -1,0 +1,11 @@
+@import "../../global";
+.ButtonsContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  > button{
+    &:nth-child(2){
+      margin-left: $size10;
+    }
+  }
+}

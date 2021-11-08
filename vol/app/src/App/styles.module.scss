@@ -1,0 +1,86 @@
+@import '../global';
+
+.Container {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: $lightgray100;
+  padding: $size50 $size20;
+
+  > .TitleContainer {
+    > .Title {
+      font-size: 3rem;
+
+      > span {
+        color: $primary100;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  > .NavContainer {
+    justify-content: space-between;
+    margin-bottom: $size10;
+    @media screen and (max-width: 800px){
+      flex-wrap:wrap ;
+
+      >* {
+        &:first-child {
+          width: 100% !important;
+          flex: none !important;
+          margin-bottom: $size5;
+          margin-left: 0 !important;
+        }
+        &:nth-child(2){
+          margin-left: 0 !important;
+        }
+        margin-left: $size5 !important;
+        flex: 1 1;
+      }
+
+    }
+
+    > * {
+      //padding: $size10;
+      margin-left: $size10;
+      width: max-content;
+
+      &:first-child {
+        margin-left: 0;
+        flex: 1 1;
+        max-width: none;
+      }
+
+      > span {
+        > svg {
+          font-size: $size20;
+          color: $primary100;
+          margin-right: -.5rem;
+        }
+      }
+    }
+
+    > .NewDeveloper {
+      background-color: $primary100;
+      color: white;
+    }
+
+  }
+
+
+}
+
+.DevelopersContainer {
+  flex-flow: column;
+  overflow: auto;
+  max-height: 600px;
+
+  > * {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

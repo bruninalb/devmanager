@@ -1,0 +1,41 @@
+@import "../../global";
+
+.Container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+
+  > input, > textarea, > select {
+    height: 100%;
+    width: 100%;
+    padding: $size10;
+    border: 1px solid white !important;
+    outline: none;
+
+  }
+  >*::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+
+  >*:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+  }
+
+  >*::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+  }
+  > input[type=text] {
+
+  }
+
+  > select {
+    &:hover {
+      cursor: pointer;
+    }
+
+    option {
+      border-radius: 0;
+    }
+  }
+}

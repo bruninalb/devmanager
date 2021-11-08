@@ -1,0 +1,117 @@
+@import "../../global";
+.FiltersContainer {
+  border: none;
+  padding: $size10;
+  transition: all .5s;
+  background-color: $white100;
+  color: $primary100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+
+  &:hover {
+    cursor: pointer;
+    .FiltersHidden{
+      z-index: 999;
+      transform: scaleY(1);
+    }
+    > svg{
+      transform: rotate(180deg);
+    }
+  }
+
+  > svg {
+    color: $primary100;
+    font-size: $size20;
+    margin-right: -$size5;
+    transition: all .5s;
+  }
+  .FiltersHidden{
+    min-width: 100%;
+    position: absolute;
+    padding: $size5;
+    background-color: $primary100;
+    top: 100%;
+    left: 0;
+    transform-origin: top;
+    transition: all .5s;
+    z-index: -1;
+    transform: scaleY(0);
+    .AgeFilter{
+      display: flex;
+      flex-wrap: wrap;
+      color: white;
+      >h3{
+        margin-bottom: $size5;
+      }
+
+      >div{
+        display: flex;
+        align-items: center;
+        margin-bottom: $size10;
+
+        >*{
+          margin-right: $size5;
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+
+        >div{
+          min-width: 3rem;
+          >input{
+            padding: $size5;
+            color: $primary100;
+          }
+
+          >input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $primary100;
+            opacity: 1; /* Firefox */
+          }
+
+          >input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: $primary100;
+          }
+
+          >input::-ms-input-placeholder { /* Microsoft Edge */
+            color: $primary100;
+          }
+        }
+      }
+    }
+    .GenderFilter{
+
+      >h3{
+        margin-bottom: $size5;
+        color: white;
+      }
+      >div{
+        display: flex;
+        >span{
+          border: none;
+          padding: $size5;
+          transition: all .5s;
+          background-color: $white100;
+          color: $primary100;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          &:first-child{
+            margin-right: $size5;
+          }
+        }
+        .Active{
+          background-color: $red100;
+          color: $white100;
+        }
+      }
+    }
+
+    >button {
+      margin-top: $size10;
+    }
+  }
+}

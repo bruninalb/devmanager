@@ -1,0 +1,74 @@
+@import "../../global";
+.Active{
+  transform: scaleX(1) !important;
+  z-index: 900;
+}
+.Filter{
+  position: fixed;
+  background-color: $black50;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scaleX(0);
+  transform-origin:left;
+  transition: all .3s;
+  padding: $size20;
+  > .Container {
+    background-color: $primary100;
+    color: white;
+    flex-flow: column;
+    padding: $size20;
+    >header{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      margin-bottom: $size20;
+      >div {
+        display: flex;
+        > h1{
+          margin-bottom: $size5;
+        }
+        > svg{
+          font-size: $size20;
+          margin-right: $size10;
+        }
+
+      }
+      > .CloseButton{
+        >svg {
+          font-size: $size20;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transition: all .5s;
+          &:hover{
+            opacity: .7;
+            cursor: pointer;
+          }
+        }
+      }
+      > p{
+        width: 100%;
+        text-align: justify;
+      }
+    }
+    >main{
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      > div {
+        margin-bottom: $size10;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+
+    }
+
+  }
+}

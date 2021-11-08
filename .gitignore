@@ -1,0 +1,36 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+/vol/api/.pnp
+/vol/api/.pnp.js
+
+# testing
+/vol/api/coverage
+
+# production
+/vol/api/build
+
+# misc
+/vol/api/.DS_Store
+/vol/api/.env.local
+/vol/api/.env.development.local
+/vol/api/.env.test.local
+/vol/api/.env.production.local
+
+/vol/api/npm-debug.log*
+/vol/api/yarn-debug.log*
+/vol/api/yarn-error.log*
+
+/vol/api/node_modules
+/vol/api/public/hot
+/vol/api/public/storage
+/vol/api/storage/*.key
+/vol/api/vendor
+/vol/api/.env
+/vol/api/.env.backup
+/vol/api/.phpunit.result.cache
+/vol/api/docker-compose.override.yml
+/vol/api/Homestead.json
+/vol/api/Homestead.yaml
+/vol/api/npm-debug.log
+/vol/api/yarn-error.log
+/vol/api/.idea
+/vol/api/.vscode

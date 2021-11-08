@@ -1,0 +1,35 @@
+@import "../../global";
+.Button {
+  border: none;
+  padding: $size10;
+  transition: all .5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  >svg{
+    margin-left: $size10;
+    font-size: $size10;
+  }
+
+
+  &:hover {
+    opacity: .7;
+    cursor: pointer;
+  }
+}
+
+.Primary {
+  background-color: $primary100;
+  color: $white100;
+}
+
+.Red {
+  background-color: $red100;
+  color: $white100;
+}
+
+.White {
+  background-color: $white100;
+  color: $primary100;
+}

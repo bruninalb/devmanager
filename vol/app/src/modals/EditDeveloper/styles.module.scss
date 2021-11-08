@@ -1,0 +1,10 @@
+@import "../../global";
+
+.EditModal{
+  .ButtonsContainer{
+    display: flex;
+    >*:last-child {
+      margin-left: $size10;
+    }
+  }
+}
